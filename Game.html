@@ -1,0 +1,34 @@
+<html>
+	
+  <head>
+	<title>Game</title>
+	<link rel="stylesheet" href="Scripts/styles.css">
+  </head>
+	
+	<style id="rotate90deg">
+		.rotate90 {transform: rotate(90deg);}
+		.rotate180 {transform: rotate(180deg);}
+		.rotate270 {transform: rotate(270deg);}
+		.rotate0 {transform: rotate(0deg);}
+	</style>
+	
+  <body id="body" onload="Counter();healthRegen();findEntities();" onKeyUp="KeyDetector(event);">
+	<a>
+		<img src="Images/Player.png" style="position: absolute; left: 256; right: 256; top: 256; bottom: auto;" Height="64" Width="64" id="player" class="rotate180">
+	</a>
+	  
+	  <img src="Images/Healthstage1.png" style="position: absolute; left: 0; right: 0; top: 0; bottom: auto;" Height="64" Width="64" id="Healthbar" value="health">
+	  
+	  <img src="Images/Rock.png" Height="64" Width="64" id="rock" style="position: absolute; left: 64; right: 64; top: 64; bottom: auto;">
+	  
+	  <h1 color="white" id="stone" value="Stones : 0" style="color: ffffff; position: absolute; left: 650; right: 650; top: 550; bottom: auto;">
+		  0
+	  </h1>
+	  <p id="deathScreen" style="color: red; position: absolute; left: 625; right: 500; top: 250; bottom: auto;" hidden>YOU DIED</p>
+	  <img src="Images/Enemy.png" Height="64" Width="64" id="enemy" style="position: absolute; left: 512; right: 512; top: 512; bottom: auto;">
+  </body>
+	
+  <script src="Scripts/Javascript.js"></script>
+  <script src="Scripts/EnemyScript.js"></script>
+  <script src="Scripts/PlayerScript.js"></script>
+</html>
